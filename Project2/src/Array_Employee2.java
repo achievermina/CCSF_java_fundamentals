@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Array_Employee2 {
 
-    private int Eno, i, num;
+    private int Eno;
     private String Ename, day;
     private double working_hour, Rate, Gross_Salary = 0, salary1, salary2, salary3;
 
@@ -42,6 +42,7 @@ public class Array_Employee2 {
             } while (Hours[i] < 0 | Hours[i] > 24);
             }
         Calculate();
+        Display();
         }
 
 
@@ -49,7 +50,7 @@ public class Array_Employee2 {
 
 
     //calculate Gross_salary
-    public double Calculate() {
+    public void Calculate() {
         //weekdays
         for (int i = 0; i < 5; i++) {
             working_hour = Hours[i];
@@ -80,8 +81,6 @@ public class Array_Employee2 {
         for (int i = 0; i < 7; i++) {
             Gross_Salary += Salary[i];
         }
-
-        return Gross_Salary;
     }
 
 
