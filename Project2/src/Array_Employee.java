@@ -1,50 +1,122 @@
+import java.util.Scanner;
+
 public class Array_Employee {
 
-public class Employee {
-    private int Eno;
-    private String Ename;
-    private double Rate, Gross_Salary;
+    private int Eno, i, num;
+    private String Ename, day;
+    private double working_hour, Rate, Gross_Salary = 0, salary1, salary2, salary3;
 
-    double [] Hours = new double[7];
-    double [] Salary = new double[7];
+    double[] Hours = new double[7];
+    double[] Salary = new double[7];
 
     //constructor1
-    public Employee(){
+    public Array_Employee() {
         Eno = 0;
-        Ename =" ";
+        Ename = " ";
         Rate = 0;
-        Gross_Salary =0;
-
+        Gross_Salary = 0;
     }
 
-
-    //for String, just use next()
+    // Input + calling calculate()
     public void Input() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the number");
-        E_no = input.nextInt();
-        System.out.println("Enter the Fname");
-        E_Fname = input.next();
-        System.out.println("Enter the Lname");
-        E_Lname = input.next();
-        System.out.println("Enter the DOJ");
-        E_DOJ = input.next();
-        System.out.println("Enter the Department");
-        E_Department = input.next();
-        System.out.println("Enter the Designation");
-        E_Designation = input.next();
-        System.out.println("Enter the Salary");
-        E_Salary = input.nextDouble();
+        System.out.println("New Employee Input Start");
+        System.out.println("Enter the Employee number");
+        Eno = input.nextInt();
+        System.out.println("Enter the Employee name");
+        Ename = input.next();
+        System.out.println("Enter the Salary Rate");
+        Rate = input.nextDouble();
+
+        for (i = 0; i < 7; i++) {
+            String isDay = whichDay();
+            System.out.println("Enter the working hours of " + isDay);
+            Hours[i] = input.nextDouble();
+
+            if (Hours[i] < 0 | Hours[i] > 24) {
+                System.out.println("Please type the correct hour");
+                System.out.println("Enter the working hours of " + isDay);
+                Hours[i] = input.nextDouble();
+            }
+        }
+
+        Calculate();
 
     }
+
+
+    //calculate Gross_salary
+    public double Calculate() {
+        //weekdays
+        for (i = 0; i < 5; i++) {
+            working_hour = Hours[i];
+            if (working_hour > 12) {
+                salary1 = 8 * Rate;
+                salary2 = 4 * Rate * 1.5;
+                salary3 = (working_hour - 12) * Rate * 2;
+                Salary[i] = salary1 + salary2 + salary3;
+
+            } else if (working_hour > 8) {
+                salary1 = 8 * Rate;
+                salary2 = (working_hour - 8) * Rate * 1.5;
+                Salary[i] = salary1 + salary2;
+            } else if (working_hour >= 0) {
+                salary1 = working_hour * Rate;
+                Salary[i] = salary1;
+            }
+        }
+        //weekend
+        for (i = 5; i < 7; i++) {
+            working_hour = Hours[i];
+            Salary[i] = working_hour * Rate * 2;
+        }
+
+        System.out.print(Salary);
+
+        //Gross_Salary Calculation
+        for (i = 0; i < 7; i++) {
+            Gross_Salary += Salary[i];
+        }
+
+        return Gross_Salary;
+    }
+
 
     public void Display() {
-        System.out.println("The Employee number is " + E_no);
-        System.out.println("The Employee first name is " + E_Fname);
-        System.out.println("The Employee last name is " + E_Lname);
-        System.out.println("The Date of Joining is " + E_DOJ);
-        System.out.println("The Department is " + E_Department);
-        System.out.println("The Designation is " + E_Designation);
-        System.out.println("The Salary is " + E_Salary);
+        System.out.println("The Employee number is " + Eno);
+        System.out.println("The Employee name is " + Ename);
+        System.out.println("The Employee's hourly rate is " + Rate);
+        System.out.println("This Salary of this week is " + Gross_Salary);
+    }
+
+
+    public String whichDay(){
+        switch(i){
+            case 0:
+                day = "Monday";
+                break;
+            case 1:
+                day = "Tuesday";
+                break;
+            case 2:
+                day = "Wednesday";
+                break;
+            case 3:
+                day = "Thursday";
+                break;
+            case 4:
+                day = "Friday";
+                break;
+            case 5:
+                day = "Saturday";
+                break;
+            case 6:
+                day = "Sunday";
+                break;
+        }
+        return day;
+
     }
 }
+
+
