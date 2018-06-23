@@ -2,7 +2,7 @@ public class main {
     public static void main(String[] args) {
 
         //first person
-        Array_Employee E1 = new Array_Employee();
+        Array_Employee2 E1 = new Array_Employee2();
         E1.Display();
         E1.Input();
         E1.Display();

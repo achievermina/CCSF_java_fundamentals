@@ -1,6 +1,6 @@
 import java.util.Scanner;
-/*
-public class Array_Employee {
+
+public class Array_Employee2 {
 
     private int Eno, i, num;
     private String Ename, day;
@@ -10,7 +10,7 @@ public class Array_Employee {
     double[] Salary = new double[7];
 
     //constructor1
-    public Array_Employee() {
+    public Array_Employee2() {
         Eno = 0;
         Ename = " ";
         Rate = 0;
@@ -28,27 +28,30 @@ public class Array_Employee {
         System.out.println("Enter the Salary Rate");
         Rate = input.nextDouble();
 
-        for (i = 0; i < 7; i++) {
-            String isDay = whichDay();
-            System.out.println("Enter the working hours of " + isDay);
-            Hours[i] = input.nextDouble();
+        for (int i = 0; i < 7; i++) {
+            String isDay = whichDay(i);
 
-            if (Hours[i] < 0 | Hours[i] > 24) {
-                System.out.println("Please type the correct hour");
+            do {
                 System.out.println("Enter the working hours of " + isDay);
                 Hours[i] = input.nextDouble();
+
+                if (Hours[i] < 0 | Hours[i] > 24) {
+                    System.out.println("Please type the correct hour");
+                }
+
+            } while (Hours[i] < 0 | Hours[i] > 24);
             }
+        Calculate();
         }
 
-        Calculate();
 
-    }
+
 
 
     //calculate Gross_salary
     public double Calculate() {
         //weekdays
-        for (i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             working_hour = Hours[i];
             if (working_hour > 12) {
                 salary1 = 8 * Rate;
@@ -65,15 +68,16 @@ public class Array_Employee {
                 Salary[i] = salary1;
             }
         }
+
         //weekend
-        for (i = 5; i < 7; i++) {
+        for (int i = 5; i < 7; i++) {
             working_hour = Hours[i];
             Salary[i] = working_hour * Rate * 2;
         }
 
 
         //Gross_Salary Calculation
-        for (i = 0; i < 7; i++) {
+        for (int i = 0; i < 7; i++) {
             Gross_Salary += Salary[i];
         }
 
@@ -89,7 +93,7 @@ public class Array_Employee {
     }
 
 
-    public String whichDay(){
+    public String whichDay(int i){
         switch(i){
             case 0:
                 day = "Monday";
@@ -119,4 +123,3 @@ public class Array_Employee {
 }
 
 
-*/
