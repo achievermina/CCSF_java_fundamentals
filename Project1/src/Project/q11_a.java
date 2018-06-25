@@ -2,7 +2,7 @@ package Project;
 
 import java.util.Scanner;
 
-public class a {
+public class q11_a {
     public static void main(String[] args) {
 
     int number, digit, numofevendigits =0, even_sum_digit = 0, numofodddigits = 0, odd_sum_digit = 0;

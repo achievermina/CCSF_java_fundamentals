@@ -2,7 +2,7 @@ package Project;
 
 import java.util.Scanner;
 
-public class reverseNumber {
+public class q11_c_reverseNumber {
 
     public static void main(String[] args) {
         int number, digit, reverse=0;

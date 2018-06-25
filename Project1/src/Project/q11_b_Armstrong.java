@@ -2,7 +2,7 @@ package Project;
 
 import java.util.Scanner;
 
-public class b {
+public class q11_b_Armstrong {
 
     public static int power(int a, int b){
         int a_b =1;

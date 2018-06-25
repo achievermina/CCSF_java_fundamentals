@@ -5,7 +5,7 @@ public class main {
         Array_Employee2 E1 = new Array_Employee2();
         E1.Display();
         E1.Input();
-        E1.Display();
+
 
     }
 }
@@ -15,35 +15,38 @@ The Employee name is
 The Employee's hourly rate is 0.0
 This Salary of this week is 0.0
 
+New Employee Input Start
 Enter the Employee number
-12
+134
 Enter the Employee name
 mina
 Enter the Salary Rate
-10
-
-Enter the working hours of Monday
-26
-Please type the correct hour
-Enter the working hours of Monday
 12
-Enter the working hours of Tuesday
--2
+Enter the working hours of Monday
+25
 Please type the correct hour
+Enter the working hours of Monday
+34
+Please type the correct hour
+Enter the working hours of Monday
+46
+Please type the correct hour
+Enter the working hours of Monday
+10
 Enter the working hours of Tuesday
-2
+10
 Enter the working hours of Wednesday
-2
+10
 Enter the working hours of Thursday
-2
+10
 Enter the working hours of Friday
-2
+5
 Enter the working hours of Saturday
-2
+5
 Enter the working hours of Sunday
-2
-[D@5e481248The Employee number is 12
+5
+The Employee number is 134
 The Employee name is mina
-The Employee's hourly rate is 10.0
-This Salary of this week is 300.0
+The Employee's hourly rate is 12.0
+This Salary of this week is 828.0
  */

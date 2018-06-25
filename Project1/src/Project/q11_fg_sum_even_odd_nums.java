@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 
-public class sum_even_odd_nums{
+public class q11_fg_sum_even_odd_nums{
 
     public static void main(String[] args) {
 

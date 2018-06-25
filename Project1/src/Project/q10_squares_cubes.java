@@ -1,7 +1,7 @@
 package Project;
 import java.util.Scanner;
 
-public class q10 {
+public class q10_squares_cubes {
 
     public static void main(String[] args) {
         int i, number, output, output2, output3;

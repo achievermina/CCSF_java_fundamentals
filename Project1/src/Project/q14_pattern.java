@@ -1,7 +1,7 @@
 package Project;
 import java.util.Scanner;
 
-public class pattern {
+public class q14_pattern {
 
     public static void main(String[] args){
         int n;
