@@ -15,8 +15,14 @@ public class Main_account {
     public static void main(String[] arg) {
 
         Register();
+        System.out.println(" ");
         System.out.println("Transaction Choice");
+        System.out.println(" ");
         Transaction();
+        System.out.println(" ");
+        System.out.println("display the details of all Account Holders");
+        System.out.println(" ");
+        DisplayAll();
 
     }
 
@@ -85,14 +91,69 @@ public class Main_account {
 
     public static void DisplayAll(){
         for (int i = 1; i < acct.length; i++) {
+            System.out.println("Account"+i);
             acct[i].Show();
+            System.out.println("");
 
         }
     }
 
-
-
-
-
-
 }
+/*
+Enter the number of accounts
+2
+Let's start entering the data of accounts
+Enter the account number
+45
+Enter the name
+afds
+Enter the Balance
+600
+the account number: 45
+the name: afds
+the Balance:600.0
+Enter the account number
+23
+Enter the name
+asdf
+Enter the Balance
+800
+the account number: 23
+the name: asdf
+the Balance:800.0
+
+Transaction Choice
+
+Please enter your account number
+23
+the account number: 23
+the name: asdf
+the Balance:800.0
+Which transaction do you wanna do? withdraw:1 or deposit:2
+1
+Enter the amount
+45
+Current Balance:755.0
+Do you want to continue transaction? YES:1, NO:2
+1
+Which transaction do you wanna do? withdraw:1 or deposit:2
+2
+Enter the amount
+50
+Current Balance:805.0
+Do you want to continue transaction? YES:1, NO:2
+2
+Finish the Transaction
+
+display the details of all Account Holders
+
+Account1
+the account number: 45
+the name: afds
+the Balance:600.0
+
+Account2
+the account number: 23
+the name: asdf
+the Balance:805.0
+ */

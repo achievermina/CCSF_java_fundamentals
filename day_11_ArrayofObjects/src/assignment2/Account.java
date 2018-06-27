@@ -41,10 +41,11 @@ public class Account {
             Balance -= Amt;
             System.out.println("Current Balance:" + RBalance());
             transaction_loop();
-        }else
+        }else {
             System.out.println("There is not enough balance on your account");
             System.out.println("Current Balance:" + RBalance());
             Type();
+        }
 
     }
 
@@ -66,7 +67,7 @@ public class Account {
                 Deposit(amount);
                 break;
 
-            default: System.out.println("You put the wrong type, please write 1 or 2");
+           default: System.out.println("You put the wrong type, please write 1 or 2");
                     Type();
         }
 
