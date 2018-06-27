@@ -18,3 +18,9 @@ public class q9_b_nSumofSquares  {
     }
 
 }
+
+/*
+what is n?
+4
+the total is 120
+ */

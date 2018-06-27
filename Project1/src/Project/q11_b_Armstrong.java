@@ -46,3 +46,12 @@ public class q11_b_Armstrong {
     }
 }
 
+/*
+Enter the number
+234
+The number is NOT an Armstrong number
+
+Enter the number
+121
+The number is NOT an Armstrong number
+ */

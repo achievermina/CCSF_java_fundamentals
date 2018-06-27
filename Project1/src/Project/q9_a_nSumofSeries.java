@@ -18,3 +18,8 @@ public class q9_a_nSumofSeries {
         }
     }
 
+/*
+what is n?
+5
+the total is 25
+ */

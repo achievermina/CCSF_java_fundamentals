@@ -26,5 +26,12 @@ public class sum_series_q13 {
     }
 
 
-
 }
+
+/*
+What should the base 'x' be?
+4
+What should the exponent 'n' be?
+2
+the sum is 20
+ */

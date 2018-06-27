@@ -50,3 +50,20 @@ public class q10_squares_cubes {
 
     }
 }
+/*
+Enter the number
+3
+a. First 5 multiples
+
+b. Squares of first 5 multiples
+
+c. Cubes of first five multiples.
+which option do you want to choose?
+b
+Squares of first 5 multiples are
+9
+36
+81
+144
+225
+ */

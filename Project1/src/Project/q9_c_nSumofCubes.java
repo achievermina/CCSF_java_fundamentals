@@ -14,3 +14,8 @@ public class q9_c_nSumofCubes {
         System.out.println("the total is " + total);
     }
 }
+/*
+what is n?
+3
+the total is 153
+ */

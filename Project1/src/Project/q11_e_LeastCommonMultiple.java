@@ -55,3 +55,10 @@ public class q11_e_LeastCommonMultiple {
         return ((double) numerator / denominator % 1) == 0 ? true : false;
     }
 }
+/*
+enter first number
+15
+enter second number
+25
+the least common multiple is 75
+ */

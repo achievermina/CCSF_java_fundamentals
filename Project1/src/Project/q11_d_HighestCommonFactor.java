@@ -33,3 +33,14 @@ public class q11_d_HighestCommonFactor {
         System.out.println("the highest common factor is " + HCF);
     }
 }
+/*
+enter first number
+18
+enter second number
+24
+common factor:1
+common factor:2
+common factor:3
+common factor:6
+the highest common factor is 6
+ */

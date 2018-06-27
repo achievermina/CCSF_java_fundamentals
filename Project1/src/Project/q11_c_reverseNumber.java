@@ -20,3 +20,8 @@ public class q11_c_reverseNumber {
     }
 
 }
+/*
+Enter the number
+1298
+The reverse number is 8921
+ */
