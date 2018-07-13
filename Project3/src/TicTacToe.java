@@ -70,14 +70,14 @@ public class TicTacToe { // □
 			if (gameBoard[row][0] == gameBoard[row][1] && gameBoard[row][1] == gameBoard[row][2]
 					&& gameBoard[row][1] != '□') {
 				result = true;
-				winner = gameBoard[1][1];
+				winner = gameBoard[row][1];
 			}
 		// column
 		for (int column = 0; column < gameBoard.length; column++)
 			if (gameBoard[0][column] == gameBoard[1][column] && gameBoard[1][column] == gameBoard[2][column]
 					&& gameBoard[1][column] != '□') {
 				result = true;
-				winner = gameBoard[1][1];
+				winner = gameBoard[1][column];
 			}
 
 		if (winner!='□')
@@ -90,6 +90,7 @@ public class TicTacToe { // □
 	}
 
 	public static void game() {
+		Num_of_turn = 0;
 		reset();
 		while (!gameOver()) {
 			turn();
