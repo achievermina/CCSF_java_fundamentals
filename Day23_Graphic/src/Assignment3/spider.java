@@ -21,17 +21,26 @@ public class spider extends Application {
 
         Group root = new Group();
         Scene scene = new Scene(root);
-        Canvas canvas = new Canvas(150, 150);
+        Canvas canvas = new Canvas(400, 400);
         GraphicsContext sp = canvas.getGraphicsContext2D();
-        sp.setFill(Color.BLACK);
+        sp.setFill(Color.BLUE);
         sp.fillOval(185, 185, 30, 30);
+        sp.setStroke(Color.RED);
         sp.strokeOval(175, 175, 50, 50);
         //fill stroke
-        sp.strokeArc(150, 160, 75, 50, 180, -180, ArcType.OPEN);
+        sp.setStroke(Color.GREEN);
+        sp.strokeArc(225, 160, 80, 75, 90, 180, ArcType.OPEN);
+        sp.strokeArc(160, 100, 80, 75, 180, 180, ArcType.OPEN);
+        sp.strokeArc(95, 160, 80, 75, 270, 180, ArcType.OPEN);
+        sp.strokeArc(160, 225, 80, 75, 180, -180, ArcType.OPEN);
+
+
+
         root.getChildren().add(canvas);
-        primaryStage.setTitle(" SAD Face");
+        primaryStage.setTitle("Spider");
         primaryStage.setScene(scene);
         primaryStage.show();
+
 
 
     }

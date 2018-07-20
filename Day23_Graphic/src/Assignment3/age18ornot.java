@@ -10,11 +10,11 @@ public class age18ornot {
         int answer = JOptionPane.showConfirmDialog(null, "Are you over 18?", "Yes OR No", JOptionPane.YES_NO_OPTION);
         if(answer == JOptionPane.YES_OPTION){
             adult = true;
-            System.out.println("You are an adult");
-
+            JOptionPane.showMessageDialog(null, "ADULT: "+adult);
         }else if(answer == JOptionPane.NO_OPTION){
             adult = false;
-            System.out.println("You are NOT an adult");
+            JOptionPane.showMessageDialog(null, "ADULT: "+adult);
+
         }else
             System.out.println("This is impossible");
 
