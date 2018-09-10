@@ -7,5 +7,8 @@ HW Assignments
 - Methods
 - Class
 - Array
+- Inheritance
+- Exception
+- String
 
 Group Projects
